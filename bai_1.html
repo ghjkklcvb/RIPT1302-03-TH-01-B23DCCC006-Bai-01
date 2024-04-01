@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đồng hồ đếm</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    align-items: center;
+    text-align: center;
+    background-image: url("00585a3568a0a7d.jpg")
+
+  }
+  #clock {
+    font-size: 10em;
+    margin-top: 35vh;
+  }
+</style>
+<h1>THỜI GIAN HIỆN TẠI LÀ:</h1>
+</head>
+<body>
+<div id="clock">00:00:00</div>
+<script>
+  function updateClock() {
+    var now = new Date();
+    var hours = now.getHours().toString().padStart(2, '0');
+    var minutes = now.getMinutes().toString().padStart(2, '0');
+    var seconds = now.getSeconds().toString().padStart(2, '0');
+    var timeString = hours + ':' + minutes + ':' + seconds;
+    document.getElementById('clock').textContent = timeString;
+  }
+
+  setInterval(updateClock, 1000);
+</script>
+<h1>THEO GIỜ VIỆT NAM</h1>
+</body>
+</html>
